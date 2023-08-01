@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
+.section {
+  margin-top: 150px;
+}
+@media screen and (max-width: 767px) {
+  .section {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-form {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .login-form {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .login-form {
+    padding: 25px 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .form-container {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .form-container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-container {
+    width: 100%;
+  }
+}
+
+.form-title {
+  padding-bottom: 20px;
+}

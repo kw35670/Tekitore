@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./css/login.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header bg-light fixed-top shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="/docs/4.5/assets/brand/bootstrap-solid.svg"
+                            width="30"
+                            height="30"
+                            class="d-inline-block align-top"
+                            alt=""
+                        />
+                        てきとれ
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse ms-auto"
+                        id="navbarNavDropdown"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">トップ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">お知らせ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdownMenuLink"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    マイページ
+                                </a>
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdownMenuLink"
+                                >
+                                    <a class="dropdown-item" href="#">マイページ</a>
+                                    <a class="dropdown-item" href="#">ログアウト</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container form-container">
+                <form class="login-form bg-light shadow">
+                    <h2 class="form-title">ログイン</h2>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                            >メールアドレス</label
+                        >
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                        />
+                        <div id="emailHelp" class="form-text">
+                            あなたのメールを他の人と共有することはありません。
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                            >パスワード</label
+                        >
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                        />
+                    </div>
+                    <div class="warning text-primary">
+                        <a href="#" class="warning-account"
+                            >アカウントを作成する</a
+                        >
+                        <a href="#" class="warning-pass">パスワードを忘れた</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">送信</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer bg-dark text-center w-100">
+            <div class="container">
+                <div class="footer-title text-white mt-4">タイトル</div>
+                <ul class="footer-lists d-flex justify-content-center p-0 mt-3">
+                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">トップ</a></li>
+                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">お知らせ</a></li>
+                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">マイページ</a></li>
+                </ul>
+                <div class="footer-copy text-white mb-4">Copyright &copy; 2023 テキトレ All rights reserved.</div>
+            </div>
+        </footer>
+
+        <!-- bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

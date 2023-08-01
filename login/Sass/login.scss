@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+$layout-width-inner: 1200px;
+$primary-color: #3EA1D1;
+$font-color: #333;
+
+//ブレークポイント
+$breakpoints: (
+    sp: 'screen and (max-width: 767px)',
+    tab: 'screen and (max-width: 1279px)',
+    pc: 'screen and (min-width: 1280px)'
+) !default;
+
+//メディアクエリー
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.section {
+    margin-top: 150px;
+
+    @include mq('sp') {
+        margin-top: 100px;
+    };
+}
+
+.login-form {
+    @include mq('pc') {
+        padding: 80px;
+    }
+
+    @include mq('tab') {
+        padding: 50px;
+    }
+
+    @include mq('sp') {
+        padding: 25px 20px;
+    }
+}
+
+.form-container {
+    @include mq('pc') {
+        width: 60%;
+    }
+
+    @include mq('tab') {
+        width: 75%;
+    }
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.form-title {
+    padding-bottom: 20px;
+}
+
+.warning {
+    display: block;
+    font-size: 12px;
+}
+
+.warning-account {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.warning-pass {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer {
+    position: sticky;
+    top: 100vh;
+    bottom: 0;
+    padding: 10px 0;
+
+    
+
+    @include mq('sp') {
+        margin-top: 50px;
+    }
+}
+
+.footer-list {
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.footer-copy {
+    @include mq('sp') {
+        font-size: 12px;
+    }
+}
