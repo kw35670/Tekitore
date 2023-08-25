@@ -18,7 +18,7 @@ $breakpoints: (
 }
 
 .section {
-    margin: 150px 0;
+    margin-top: 150px;
 
     @include mq('sp') {
         margin-top: 100px;
@@ -57,13 +57,58 @@ $breakpoints: (
     padding-bottom: 20px;
 }
 
-.col-sm-10 {
-    width: 100%;
+.warning {
+    display: block;
+    font-size: 12px;
 }
 
-.name-label-width {
-    width: 10%;
+.warning-account {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.warning-pass {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.exImg {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    img {
+        width: 200px;
+        height: 250px;
+
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.footer {
+    position: sticky;
+    top: 100vh;
+    bottom: 0;
+    padding: 10px 0;
+
+    
+
     @include mq('sp') {
-        width: 20%;
+        margin-top: 50px;
+    }
+}
+
+.footer-list {
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.footer-copy {
+    @include mq('sp') {
+        font-size: 12px;
     }
 }

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
 .section {
-  margin: 150px 0;
+  margin-top: 150px;
 }
 @media screen and (max-width: 767px) {
   .section {
@@ -44,15 +44,58 @@
   padding-bottom: 20px;
 }
 
-.col-sm-10 {
-  width: 100%;
+.warning {
+  display: block;
+  font-size: 12px;
 }
 
-.name-label-width {
-  width: 10%;
+.warning-account {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.warning-pass {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.exImg {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+.exImg img {
+  width: 200px;
+  height: 250px;
+}
+.exImg img:not(:first-child) {
+  margin-left: 20px;
+}
+
+.footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100vh;
+  bottom: 0;
+  padding: 10px 0;
 }
 @media screen and (max-width: 767px) {
-  .name-label-width {
-    width: 20%;
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+.footer-list:not(:first-child) {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-copy {
+    font-size: 12px;
   }
 }

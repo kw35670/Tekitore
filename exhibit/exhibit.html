@@ -14,7 +14,7 @@
         <!-- css -->
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="./css/login.css" />
+        <link rel="stylesheet" href="./css/exhibit.css" />
     </head>
     <body>
         <!-- header -->
@@ -68,8 +68,12 @@
                                     class="dropdown-menu"
                                     aria-labelledby="navbarDropdownMenuLink"
                                 >
-                                    <a class="dropdown-item" href="#">マイページ</a>
-                                    <a class="dropdown-item" href="#">ログアウト</a>
+                                    <a class="dropdown-item" href="#"
+                                        >マイページ</a
+                                    >
+                                    <a class="dropdown-item" href="#"
+                                        >ログアウト</a
+                                    >
                                 </div>
                             </li>
                         </ul>
@@ -80,8 +84,26 @@
 
         <section class="section">
             <div class="container form-container">
-                <form class="login-form bg-light shadow">
-                    <h2 class="form-title">ログイン</h2>
+                <form
+                    class="login-form bg-light shadow"
+                    action="itemServlet"
+                    method="get"
+                >
+                    <h2 class="form-title text-center">教科書の出品</h2>
+                    <div class="mb-3">
+                        <div class="exImg" id="preview"></div>
+                        <label for="exhibitImg" class="form-label"
+                            >出品画像(最大５枚まで)</label
+                        >
+                        <input
+                            type="file"
+                            class="form-control"
+                            id="exhibitImg"
+                            name="itemImg"
+                            multiple
+                            required
+                        />
+                    </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label"
                             >メールアドレス</label
@@ -92,9 +114,6 @@
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                         />
-                        <div id="emailHelp" class="form-text">
-                            あなたのメールを他の人と共有することはありません。
-                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"
@@ -106,13 +125,7 @@
                             id="exampleInputPassword1"
                         />
                     </div>
-                    <div class="warning text-primary">
-                        <a href="#" class="warning-account"
-                            >アカウントを作成する</a
-                        >
-                        <a href="#" class="warning-pass">パスワードを忘れた</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary">送信</button>
+                    <button type="submit" class="btn btn-primary">出品</button>
                 </form>
             </div>
         </section>
@@ -121,11 +134,25 @@
             <div class="container">
                 <div class="footer-title text-white mt-4">タイトル</div>
                 <ul class="footer-lists d-flex justify-content-center p-0 mt-3">
-                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">ホーム</a></li>
-                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">お知らせ</a></li>
-                    <li class="footer-list"><a href="#" class="text-white text-decoration-none">マイページ</a></li>
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >ホーム</a
+                        >
+                    </li>
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >お知らせ</a
+                        >
+                    </li>
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >マイページ</a
+                        >
+                    </li>
                 </ul>
-                <div class="footer-copy text-white mb-4">Copyright &copy; 2023 テキトレ All rights reserved.</div>
+                <div class="footer-copy text-white mb-4">
+                    Copyright &copy; 2023 テキトレ All rights reserved.
+                </div>
             </div>
         </footer>
 
@@ -150,5 +177,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"
         ></script>
+        <!-- JavaScript -->
+        <script src="./js/fileUpload.js"></script>
     </body>
 </html>
