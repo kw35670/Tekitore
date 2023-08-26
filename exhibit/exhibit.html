@@ -103,27 +103,43 @@
                             multiple
                             required
                         />
+                        <button type="button" id="clear" class="btn btn-secondary">クリア</button>
                     </div>
+                    <h3 class="mt-5 mb-3">教科書の詳細</h3>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"
-                            >メールアドレス</label
+                        <label for="textTitle" class="form-label"
+                            >教科書タイトル</label
                         >
                         <input
-                            type="email"
+                            type="text"
                             class="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
+                            id="textTitle"
+                            maxlength="20"
+                            name="textTitle"
+                            required
                         />
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"
-                            >パスワード</label
+                        <label for="textExplanation" class="form-label"
+                            >教科書の説明（200字以内）</label
                         >
-                        <input
-                            type="password"
+                        <textarea
                             class="form-control"
-                            id="exampleInputPassword1"
-                        />
+                            id="textExplanation"
+                            rows="10"
+                            maxlength="200"
+                            placeholder="教科書の状態や書き込みなど詳しく記入しましょう。　
+                            
+記入例）--------------------
+（講義名）にて半年ほど使用しました。
+付録は使用しておらず、書き込み等もありません。
+目立った傷やよごれはないですが神経質な方はご遠慮ください。
+
+値下げ不可
+取り置き不可
+------------------------"
+                            required
+                        ></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">出品</button>
                 </form>

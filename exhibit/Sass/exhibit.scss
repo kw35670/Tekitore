@@ -88,6 +88,16 @@ $breakpoints: (
     }
 }
 
+#exhibitImg {
+    display: inline;
+    width: 80%;
+    margin-right: 10px;
+}
+
+#clear {
+    line-height: 1.5;
+}
+
 .footer {
     position: sticky;
     top: 100vh;
