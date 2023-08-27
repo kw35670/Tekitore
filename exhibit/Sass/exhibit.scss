@@ -19,6 +19,7 @@ $breakpoints: (
 
 .section {
     margin-top: 150px;
+    margin-bottom: 50px;
 
     @include mq('sp') {
         margin-top: 100px;
@@ -96,6 +97,11 @@ $breakpoints: (
 
 #clear {
     line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer {

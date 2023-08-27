@@ -128,7 +128,7 @@
                             id="textExplanation"
                             rows="10"
                             maxlength="200"
-                            placeholder="教科書の状態や書き込みなど詳しく記入しましょう。　
+                            placeholder="教科書の状態、都合がつく時間帯など詳しく記入しましょう。　
                             
 記入例）--------------------
 （講義名）にて半年ほど使用しました。
@@ -137,11 +137,40 @@
 
 値下げ不可
 取り置き不可
-------------------------"
+
+都合が付きやすい時間帯
+　月曜日　10：30～12：55
+　木曜日　14：25～16：15
+　火、金曜日は日中対応可能
+　土、日曜日は応相談
+------------------------------"
                             required
                         ></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">出品</button>
+                    <h3 class="mt-5 mb-3">販売価格</h3>
+                    <div class="mb-3" id="textPriceWrap">
+                        <label for="textPrice" class="form-label"
+                            >販売価格（1,000,000円以下）</label
+                        >
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="textPrice"
+                            min="1"
+                            max="1000000"
+                            step="1"
+                            name="textPrice"
+                            placeholder="￥"
+                            required
+                        />
+                        <!-- エラーメッセージ設定要素 -->
+                        <p class="text-danger" id="errorMsg"></p>
+                        <p id="profit">販売利益：</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-secondary" type="button" onclick="location.href='../index.html'">戻る</button>
+                        <button type="submit" class="btn btn-primary">出品</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -195,5 +224,6 @@
         ></script>
         <!-- JavaScript -->
         <script src="./js/fileUpload.js"></script>
+        <script src="./js/price.js"></script>
     </body>
 </html>
