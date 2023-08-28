@@ -94,7 +94,7 @@
                         <div class="exImg" id="preview"></div>
                         <label for="exhibitImg" class="form-label"
                             >出品画像(最大５枚まで)</label
-                        >
+                        ><br>
                         <input
                             type="file"
                             class="form-control"
@@ -118,6 +118,24 @@
                             name="textTitle"
                             required
                         />
+                    </div>
+                    <div class="mb-3">
+                        <label for="textState" class="form-label"
+                            >教科書の状態</label
+                        >
+                        <select
+                            class="form-control"
+                            id="textState"
+                            maxlength="20"
+                            name="textState"
+                            required
+                        >
+                            <option value="" hidden>-----選択してください-----</option>
+                            <option value="新品未使用">新品未使用</option>
+                            <option value="ほぼ未使用">ほぼ未使用</option>
+                            <option value="目立った傷やよごれなし">目立った傷やよごれなし</option>
+                            <option value="傷や汚れあり">傷や汚れあり</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="textExplanation" class="form-label"
