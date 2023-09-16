@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
+.section {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.container {
+  text-align: center;
+}
+
+.my-content-wrappper {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.my-content-wrappper li {
+  width: calc(33.3333333333% - 40px);
+}
+@media screen and (max-width: 767px) {
+  .my-content-wrappper li {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .my-content-wrappper li:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .my-content-wrappper {
+    display: block;
+  }
+}
+
+.my-content {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  border: #333 solid 1px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.my-content:hover {
+  opacity: 0.7;
+  color: black;
+}
+
+.my-content-child {
+  margin-top: 10px;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.fa-solid, .fa-regular {
+  font-size: min(15vw, 240px);
+}
+
+.fixed-bottom {
+  position: fixed !important;
+  top: auto !important;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./css/itemDetail.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header bg-light fixed-top shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="../images/logo.png"
+                            width="100%"
+                            height="30"
+                            class="d-inline-block align-top"
+                            alt=""
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse ms-auto"
+                        id="navbarNavDropdown"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">ホーム</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">お知らせ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdownMenuLink"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    マイページ
+                                </a>
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdownMenuLink"
+                                >
+                                    <a class="dropdown-item" href="#"
+                                        >マイページ</a
+                                    >
+                                    <a class="dropdown-item" href="#"
+                                        >ログアウト</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="id-wrapper">
+                    <div class="id-imgs">
+                        <img src="https://www.min-breeder.com/images/thumbnail_shiba.jpg?20220302" alt="商品の画像">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Shiba_inu_taiki.jpg" alt="商品の画像">
+                        <img src="https://www.ana.co.jp/www2/travelandlife/article/id001001/001105/images/1904.jpg" alt="商品の画像">
+                    </div>
+                    <div class="id-content">
+                        <h2 class="id-title">柴犬の気持ち</h2>
+                        <p class="id-price">1200円</p>
+                        <h4 class="id-ex-title">商品の説明</h4>
+                        <p class="id-explanation">
+                            （講義名）にて半年ほど使用しました。<br>
+                            付録は使用しておらず、書き込み等もありません。<br>
+                            目立った傷やよごれはないですが神経質な方はご遠慮ください。<br><br>
+                            
+                            値下げ不可<br>
+                            取り置き不可<br><br>
+                            
+                            都合が付きやすい時間帯<br>
+                            　月曜日　10：30～12：55 <br>
+                            　木曜日　14：25～16：15 <br>
+                            　火、金曜日は日中対応可能<br>
+                            　土、日曜日は応相談</p>
+                        <form action="itemDetail" method="post" class="id-btns">
+                            <button class="btn btn-secondary" type="button"
+						    onclick="location.href='findAllServlet'">戻る</button>
+                            <button type="button" class="btn btn-danger">購入する</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer bg-dark text-center w-100">
+            <div class="container">
+                <div class="footer-title text-white mt-4">タイトル</div>
+                <ul class="footer-lists d-flex justify-content-center p-0 mt-3">
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >ホーム</a
+                        >
+                    </li>
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >お知らせ</a
+                        >
+                    </li>
+                    <li class="footer-list">
+                        <a href="#" class="text-white text-decoration-none"
+                            >マイページ</a
+                        >
+                    </li>
+                </ul>
+                <div class="footer-copy text-white mb-4">
+                    Copyright &copy; 2023 テキトレ All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <!-- bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+        <!-- JavaScript
+        <script src="./js/fileUpload.js"></script>
+        <script src="./js/price.js"></script> -->
+    </body>
+</html>

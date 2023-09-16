@@ -55,11 +55,10 @@ create TABLE items (
   item_name varchar(30) not null,
   item_detail varchar(500) not null,
   item_state varchar(20) not null,
-  used_lecture varchar(20),
   item_price int not null,
   sale_state bit not null,
   date_time DATE not null,
-  student_number varchar(7),
+  student_number varchar(7) not null,
   FOREIGN KEY(student_number) REFERENCES users(student_number) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
