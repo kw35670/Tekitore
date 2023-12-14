@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+$layout-width-inner: 1200px;
+$primary-color: #3EA1D1;
+$font-color: #333;
+
+//ブレークポイント
+$breakpoints: (
+    sp: 'screen and (max-width: 767px)',
+    tab: 'screen and (max-width: 1279px)',
+    pc: 'screen and (min-width: 1280px)'
+) !default;
+
+//メディアクエリー
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.section {
+    margin: 150px 0;
+
+    @include mq('sp') {
+        margin-top: 100px;
+    };
+}
