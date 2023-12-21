@@ -84,21 +84,39 @@
 
     <section class="section">
         <div class="container">
+            <!-- 購入した商品の表示 -->
             <div class="transaction bg-light shadow">
                 <h1 class="transaction-title text-center">購入した商品</h1>
-                <div class="transaction-item">
+                <div class="transaction-item mt-4">
                     <img src="https://www.min-breeder.com/images/thumbnail_shiba.jpg?20220302" alt="購入した商品の画像">
-                    <div class="transaction-item-title">シバ犬の気持ち</div>
-                    <div class="transaction-item-price">1,500円</div>
+                    <div class="transaction-item-fx">
+                        <div class="transaction-item-title">シバ犬の気持ち</div>
+                        <div class="transaction-item-price">1,500円</div>
+                    </div>
                 </div>
             </div>
             
+            <!-- 取引メッセージ -->
             <div class="transaction-chat bg-light shadow mt-5">
-                <h1 class="chat-title">メッセージ</h1>
-                <div class="chat bg-white shadow buy">
-                    <h4 class="chat-studentNumber">2012006</h4>
-                    <div class="chat-text">よろしくお願いします。</div>
-                </div>
+                <h1 class="chat-title text-center">メッセージ</h1>
+                <ul class="transaction-chats mt-3">
+                    <li class="chat bg-white shadow right">
+                        <h5 class="chat-studentNumber">2012006</h5>
+                        <p class="chat-text">よろしくお願いします。</p>
+                    </li>
+                    <li class="chat bg-white shadow">
+                        <h5 class="chat-studentNumber">2012007</h5>
+                        <p class="chat-text">よろしくお願いします。</p>
+                    </li>
+                </ul>
+                <form action="/Servlet" method="post" class="transaction-comments text-center">
+                    <label for="comment" class="form-label"></label>
+                    <input type="comment" id="comment" class="form-control w-75" aria-labelledby="passwordHelpBlock" placeholder="コメントを入力" required>
+                    <button type="button" class="btn btn-primary">送信</button>
+                    <div id="passwordHelpBlock" class="form-text">
+                        相手が不快になる発言等は控えましょう。
+                    </div>
+                </form>
             </div>
         </div>
     </section>
