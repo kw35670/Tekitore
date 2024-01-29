@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>transaction</title>
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./css/transaction.css" />
+</head>
+<body>
+    <!-- header -->
+    <header class="header bg-light fixed-top shadow">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="../images/logo.png"
+                        width="100%"
+                        height="30"
+                        class="d-inline-block align-top"
+                        alt=""
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse ms-auto"
+                    id="navbarNavDropdown"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">ホーム</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">お知らせ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                マイページ
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdownMenuLink"
+                            >
+                                <a class="dropdown-item" href="#"
+                                    >マイページ</a
+                                >
+                                <a class="dropdown-item" href="#"
+                                    >ログアウト</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- 購入した商品の表示 -->
+            <div class="transaction bg-light shadow">
+                <h1 class="transaction-title text-center">購入した商品</h1>
+                <div class="transaction-item mt-4">
+                    <img src="https://www.min-breeder.com/images/thumbnail_shiba.jpg?20220302" alt="購入した商品の画像">
+                    <div class="transaction-item-fx">
+                        <div class="transaction-item-title">シバ犬の気持ち</div>
+                        <div class="transaction-item-price">1,500円</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 取引メッセージ -->
+            <div class="transaction-chat bg-light shadow mt-5">
+                <h1 class="chat-title text-center">メッセージ</h1>
+                <ul class="transaction-chats mt-3">
+                    <li class="chat bg-white shadow right">
+                        <h5 class="chat-studentNumber">2012006</h5>
+                        <p class="chat-text">よろしくお願いします。</p>
+                    </li>
+                    <li class="chat bg-white shadow">
+                        <h5 class="chat-studentNumber">2012007</h5>
+                        <p class="chat-text">よろしくお願いします。</p>
+                    </li>
+                </ul>
+                <form action="/Servlet" method="post" class="transaction-comments text-center">
+                    <label for="comment" class="form-label"></label>
+                    <input type="comment" id="comment" class="form-control w-75" aria-labelledby="passwordHelpBlock" placeholder="コメントを入力" required>
+                    <button type="button" class="btn btn-primary">送信</button>
+                    <div id="passwordHelpBlock" class="form-text">
+                        相手が不快になる発言等は控えましょう。
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-center w-100 fixed-bottom">
+        <div class="container">
+            <div class="footer-title text-white mt-4">タイトル</div>
+            <ul class="footer-lists d-flex justify-content-center p-0 mt-3">
+                <li class="footer-list">
+                    <a href="#" class="text-white text-decoration-none"
+                        >ホーム</a
+                    >
+                </li>
+                <li class="footer-list">
+                    <a href="#" class="text-white text-decoration-none"
+                        >お知らせ</a
+                    >
+                </li>
+                <li class="footer-list">
+                    <a href="#" class="text-white text-decoration-none"
+                        >マイページ</a
+                    >
+                </li>
+            </ul>
+            <div class="footer-copy text-white mb-4">
+                Copyright &copy; 2023 テキトレ All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+</body>
+</html>
