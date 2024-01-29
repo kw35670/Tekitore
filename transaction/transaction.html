@@ -85,19 +85,22 @@
     <section class="section">
         <div class="container">
             <!-- 購入した商品の表示 -->
-            <div class="transaction bg-light shadow">
+            <div class="transaction bg-light shadow p-4">
                 <h1 class="transaction-title text-center">購入した商品</h1>
-                <div class="transaction-item mt-4">
-                    <img src="https://www.min-breeder.com/images/thumbnail_shiba.jpg?20220302" alt="購入した商品の画像">
-                    <div class="transaction-item-fx">
-                        <div class="transaction-item-title">シバ犬の気持ち</div>
-                        <div class="transaction-item-price">1,500円</div>
+                <div class="transaction-wrapper mt-4">
+                    <div class="transaction-item">
+                        <img src="https://www.min-breeder.com/images/thumbnail_shiba.jpg?20220302" alt="購入した商品の画像">
+                        <div class="transaction-item-fx">
+                            <div class="transaction-item-title">シバ犬の気持ち</div>
+                            <div class="transaction-item-price">1,500円</div>
+                        </div>
                     </div>
+                    <button type="button" id="openModal" class="btn btn-primary transaction-btn">取引を完了する</button>
                 </div>
             </div>
             
             <!-- 取引メッセージ -->
-            <div class="transaction-chat bg-light shadow mt-5">
+            <div class="transaction-chat bg-light shadow mt-5 p-4">
                 <h1 class="chat-title text-center">メッセージ</h1>
                 <ul class="transaction-chats mt-3">
                     <li class="chat bg-white shadow right">
@@ -109,10 +112,10 @@
                         <p class="chat-text">よろしくお願いします。</p>
                     </li>
                 </ul>
-                <form action="/Servlet" method="post" class="transaction-comments text-center">
+                <form action="/Servlet" method="post" class="transaction-comments text-center mt-4">
                     <label for="comment" class="form-label"></label>
-                    <input type="comment" id="comment" class="form-control w-75" aria-labelledby="passwordHelpBlock" placeholder="コメントを入力" required>
-                    <button type="button" class="btn btn-primary">送信</button>
+                    <input type="comment" id="comment" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="コメントを入力" required>
+                    <button type="button" class="btn btn-primary submit-btn">送信</button>
                     <div id="passwordHelpBlock" class="form-text">
                         相手が不快になる発言等は控えましょう。
                     </div>
@@ -147,6 +150,21 @@
         </div>
     </footer>
 
+    <!-- 確認画面（モーダルウィンドウ） -->
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+          <div class="modalContents">
+            <h1>取引を完了しますよろしいですか？</h1>
+            <p>この操作は取り消せません。ご注意ください。</p>
+            <button type="button" id="openModal" class="btn btn-primary modal-btn text-center">取引を完了する</button>
+          </div>
+          <div id="closeModal" class="closeModal">
+            ×
+          </div>
+        </div>
+      </section>
+
     <!-- bootstrap -->
     <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -168,5 +186,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"
     ></script>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/transaction.js"></script>
 </body>
 </html>

@@ -1,10 +1,32 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
 .section {
-  margin: 150px 0;
+  margin: 150px auto;
 }
 @media screen and (max-width: 767px) {
   .section {
     margin-top: 100px;
+  }
+}
+
+.transaction-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .transaction-wrapper {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -25,26 +47,155 @@
      object-fit: cover;
   margin-right: 20px;
 }
+@media screen and (max-width: 767px) {
+  .transaction-item {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .transaction-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 .transaction-item-title {
   font-size: 25px;
+}
+@media screen and (max-width: 767px) {
+  .transaction-item-title {
+    font-size: 15px;
+  }
 }
 
 .transaction-item-price {
   font-size: 15px;
 }
 
+.transaction-btn {
+  margin-left: 50px;
+  width: 30%;
+  height: 100px;
+  font-size: 150%;
+}
+@media screen and (max-width: 1279px) {
+  .transaction-btn {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .transaction-btn {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 20px;
+    height: 80px;
+  }
+}
+
 .chat {
-  width: 400px;
+  width: 35%;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
+}
+@media screen and (max-width: 1279px) {
+  .chat {
+    width: 60%;
+  }
+}
+
+.right {
+  margin: 0 0 0 auto;
+}
+
+.transaction-chats {
+  padding: 0 5%;
+}
+
+@media screen and (max-width: 767px) {
+  .chat-studentNumber {
+    font-size: 15px;
+  }
 }
 
 .chat-text {
   margin-bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .chat-text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .submit-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 
 .form-control, .btn {
   display: inline-block;
+}
+
+.form-control {
+  width: 75%;
+}
+@media screen and (max-width: 767px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 700px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .modalContents h1 {
+    font-size: 20px;
+  }
+  .modalContents p {
+    font-size: 13px;
+  }
+}
+
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.closeModal {
+  position: absolute;
+  top: -13px;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 50px;
 }
