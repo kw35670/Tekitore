@@ -31,6 +31,7 @@ CREATE TABLE `memo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 ------------------------------------------------------------------------------------------
+password: pass
 
 create table users(
 	student_number varchar(7) primary key,
